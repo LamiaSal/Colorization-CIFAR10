@@ -1,0 +1,19 @@
+class MLP_net(nn.Module):
+    def __init__(self):
+        # Input layer is 1024, since CIFAR-10 gray_image is 32x32
+        # Output layer is 3072, since CIFAR-10 gray_image is 32x32x3
+        super(MLP_net, self).__init__()
+        
+        self.layer1 = nn.Linear(1024,1024)
+#         self.bn1 = nn.BatchNorm1d(32)
+        self.layer2 = nn.Linear(1024,3072)
+        
+    def forward(self, x):
+        # convert tensor (4, 1, 32, 32) --> (4, 1*32*32)
+        x = x.view(x.size(0), -1)
+        
+        x = self.layer1(x)
+#         x = self.bn1(x)
+        x = self.layer2(x)
+        
+        return x
