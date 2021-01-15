@@ -31,6 +31,6 @@ You'll find the results of some tests:
 
 
 NB: Except for "First_attempt_mlp" and "Self_implemented_MLP" directories, you'll always find 3 elements in each subdirectory:
- - the Jupyter notebook with a checkpoint
- - a directory inference in which you'll find some exmamples of test, validation and training images outputs
- - a Loss_curve.png file where you'll find the graph of the training and validation loss per epoch.
+  - the Jupyter notebook with a checkpoint
+  - a directory inference in which you'll find some exmamples of test, validation and training images outputs
+  - a Loss_curve.png file where you'll find the graph of the training and validation loss per epoch.
